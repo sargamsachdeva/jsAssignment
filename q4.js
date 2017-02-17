@@ -1,15 +1,20 @@
 (function() {
   'use strict';
-var original = {one:'one', two:'two'}
+   
+   var target={};
+   var source={age:23};
 
-var copy = original;
 
-console.log(original);
-console.log(copy);
+   copyProperties(target,source);
 
-original.one = 'two';
-original.two = 'one';
+   console.log("After copying:");
+   console.log(target,source);
 
-console.log(original); 
-console.log(copy);
 }());
+
+function copyProperties(target, source) {
+    for(prop in source) {
+    target[prop] = source[prop];
+  }
+  
+}

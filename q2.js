@@ -19,9 +19,6 @@ function checkPalindrome(str)
 			var orignalStr;
 
 
-			str = str.toLowerCase();
-
-
 			orignalStr = str;
 
 
